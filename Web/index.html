@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="google-site-verification" content="rgR4xELswA-CwZk1y9YC1Buf5G4DXJ8QqFc8Dl5qsPw" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+  	<meta name="format-detection" content="telephone=no">
+  <title>Yamen Hamid</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./nav.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+<style>
+img[alt="www.000webhost.com"]{display:none;}
+</style>
+  <link rel="stylesheet" typr="text/css" href="fontawesome.min.css">
+ <link rel="icon" href="yamem.ico"type="imge/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#ffffff">
+         
+<script language="javascript" type="text/javascript" src="dateiname.js"></script>
+<script language="javascript" type="text/javascript" src="title.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    	<script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+ 
+</head>
+
+<!--HEADER----------------->
+  <body>
+
+  
+
+<header>
+ 
+           <div id="logo">
+               <a href="#contact">
+<img src="img/logo.png" alt=logo>
+               </a>
+           </div>
+           <script type="text/javascript">
+jQuery(document).ready(function(){
+    jQuery(window).scroll(function(){
+        if(jQuery(this).scrollTop()>=50){
+        jQuery('#zp-logo').attr('style','background-size:60% !important;');
+            jQuery('.zp-logo-block').attr('style','top:0px;');
+    }   
+        else if (jQuery(this).scrollTop()<50) {
+        jQuery('#zp-logo').attr('style','background-size:100% !important')
+            jQuery('.zp-logo-block').attr('style','top:50;');
+        }
+    })
+})
+</script>
+           <div class="black">
+           <img src="https://img.icons8.com/android/24/000000/menu.png"/></div>
+              <nav id="main-nav">
+              <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+                  <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                     <li><a href="https://yamenhamid.tk/Signup.html">Sign up</li>
+                     <li><a href="https://yamenhamid.tk/login.html">Login</a></li>
+                    <li><a href="https://yamenhamid.tk/work.html">Work</a></li>
+                    <li><a href="https://yamenhamid.tk/contact.php">contact</a></li>
+
+                  </ul>
+              </nav>
+    </header>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span></span>
+</div>
+
+   
+
+<!--HOME----------------->
+<script>
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #c7c7c7 }";
+  document.body.appendChild(css);
+};
+</script>
+<canvas id="canvas" width="400" height="400"
+style="background-color:transparent;">
+</canvas>
+<style>
+  canvas{
+  width:150px;
+    margin:0px 0px 0 0px;
+  margin-top:40px;
+    display:none;}
+
+    </style>
+   <div id="canvas" >
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+	ang = num * Math.PI / 6;
+	ctx.rotate(ang);
+	ctx.translate(0, -radius*0.85);
+	ctx.rotate(-ang);
+	ctx.fillText(num.toString(), 0, 0);
+	ctx.rotate(ang);
+	ctx.translate(0, radius*0.85);
+	ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+	var now = new Date();
+	var hour = now.getHours();
+	var minute = now.getMinutes();
+	var second = now.getSeconds();
+	//hour
+	hour=hour%12;
+	hour=(hour*Math.PI/6)+
+	(minute*Math.PI/(6*60))+
+	(second*Math.PI/(360*60));
+	drawHand(ctx, hour, radius*0.5, radius*0.07);
+	//minute
+	minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+	drawHand(ctx, minute, radius*0.8, radius*0.07);
+	// second
+	second=(second*Math.PI/30);
+	drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+	ctx.beginPath();
+	ctx.lineWidth = width;
+	ctx.lineCap = "round";
+	ctx.moveTo(0,0);
+	ctx.rotate(pos);
+	ctx.lineTo(0, -length);
+	ctx.stroke();
+	ctx.rotate(-pos);
+}
+</script>
+    </div>
+
+<div class="bg"></div>
+
+<div class="bg bg2"></div>
+
+<div class="bg bg3"></div>
+<div class="content">
+
+</div>
+<style>
+	html {
+		height:100%;
+	}
+
+	body {
+		margin:0;
+	}
+
+   .bg{
+	   animation: slide 9s ease-in-out infinite alternate;
+	   opacity: .5;
+	   position: fixed;
+	   top: 0;
+	   left: -50%;
+	   right: -50%;
+	   bottom: 0;
+	   z-index: -2;
+  	 background: rgbi(255,44,5977373);;
+background: linear-gradient(90deg, rgba(255,44,59,1) 0%, rgba(255,243,0,1) 25%, rgba(//) 42%, rgba(0,249,255,1) 53%, rgba(140,0,255,1) 75%, rgba(238,0,255,1) 100%);
+	   animation-duration: 9s;
+	   animation-direction: alternate-reverse;
+   }
+   .bg3{
+	   animation-duration: 5s;
+	   animation-direction: alternate-reverse;
+   }
+
+	h1,h2,h3,h4,#about p,div,marquee{
+		font-family:monospace;
+	}
+  marquee{font-size:80px}
+	.content {
+		background-color:transparent;
+		border-radius:.25em;
+		box-shadow:0 0 .25em transparent;
+		box-sizing:border-box;
+		left:50%;
+		padding:10vmin;
+		position:fixed;
+		text-align:center;
+		top:50%;
+      transform:translate(-50%, -50%);}
+
+#about:p{font-size:30px;}
+
+	@keyframes slide {
+		0% {
+			transform:translateX(-25%);
+		}
+		100% {
+			transform:translateX(25%);
+		}
+	}
+  <canvas id="canvas" width="400" height="400"
+style="background-color:#333">
+</canvas>
+</style>
+
+  <section id="home">
+     <br>
+       <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+<h1>coding
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "is cool.", "is the best.", "games.", "is prety.", " is funny!" ]'></span>
+</h1>
+       <h2>learn how to code with
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "html.", "js", "css.", "php.", " and more" ]'></span>
+</h2>
+             <a href="#about"class="pfeil">
+               <img src="img/pfeil.png" alt="yamen" class="pfeil">
+
+       </a>
+  </section>
+      <marquee style="background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	transition-property:background;
+	background-size:100%;
+	background-clip:text;
+	-webkit-background-clip:text;
+	color:transparent;
+	font-size:70px;
+	transition:0.9s;
+
+}
+
+h4{animation:animate 8s infinite;}
+
+@keyframes animate{
+	0%{
+
+	}
+	100%{
+
+	}
+-webkit-background-clip:text;margin-top:5px;margin-top:10px;">Welcome to my Website</marquee>
+		<script>
+	(".tab li").click(function () {
+		$(".tabli").removeClass('active');
+		$(this).addClass('active');
+		var num = $(this).index();
+		$('.tab_child section').hide()
+		$('.tab_child section').eq(num).fadeIn();
+	})}}}}}}
+
+</script>
+
+
+<!--About----------------->
+<section id="about">
+<h3>About
+<span
+     class="txt-rotate"
+     data-period="2000"
+        data-rotate='[ "me", "css", "programing", "Html", "js" ]'></span>
+</h3>
+<a href="#contact">
+  <img src='img/avatar.png' alt="avatar"></a>
+   <h4>ToxicYamen</h4>
+  <p>Hallo<span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ " iam yamen can i help you?", " i can help you? ", " hi iam Yamen.", " are you fine?", " do you want help." ]'></span>
+</section>
+			  		<a href="img/info.jpeg"  class="mi1-button" download>
+<i class="fas fa-download">Download</i>	
+			<span></span>	
+		</a>
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<style>
+.material-icons { 
+font-size: 28px; 
+position:relative;
+top:7px;
+}
+.mi1-button {
+  display: inline-block;
+  font-size: 20px;
+  padding: 2px 25px 8px 20px;
+  color:#006600;
+  background-color: transparent;
+  border: 1px solid #006600;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+.mi1-button:hover,
+.mi1-button:active {
+  background-color:#006600;	
+  color:#ffffff;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+</style>
+<style>
+.material-icons { 
+font-size: 28px; 
+position:relative;
+top:7px;
+}
+.mi2-button {
+  display: inline;
+  font-size: 20px;
+  padding: 2px 25px 8px 20px;
+  color: #FF0000;
+  background-color: transparent;
+  border: 1px solid #FF0000;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+.mi2-button:hover,
+.mi2-button:active {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+</style>
+
+
+
+
+
+<!--Contect----------------->
+
+<section id="contact">
+<a href="contact"alt="contacts"></a><h3>Contect<span
+     class="txt-rotate"
+     data-period="2000"
+        data-rotate='[ " me", " me", " me", " me", " me" ]'></span></h3>
+<hr/>
+<form action="yamen.php"method="post">
+<input class="input_text" type="email"name="email"tabindex="1"/ placeholder="E-mail"/><br/>
+<input class="input_text" type="yamen"name="name" tabindex="2"/ placeholder=Firstname&Lastname><br/>
+<textarea class="input_text" tabindex="3"/ placeholder="Message"name="message"></textarea><br/>
+<input class="button" type="submit" name="submit" value="submit">
+  </form>
+    </section>
+    <script>
+    $(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+});
+</script>
+	<script>
+		focusTitle = $('head title').text(); // Originalen Title speichern
+		$(window).on('blur focus', function(e) {
+			var prevType = $(this).data('prevType'); 
+			if (prevType != e.type) {
+				switch (e.type) {
+					case 'blur':
+						var i=0;
+						tab = setInterval(function() {
+							switch(i++%2) { // Die Zahl hinter dem % muss mit der Anzahl der Cases übereinstimmen
+								case 0: document.title = 'ist cool'; // Erste Anzeige im Tab
+								break;
+								case 1: document.title = 'besuch mich wieder'; // Zweite Anzeige im Tab
+							}
+						}, 1000); // Zeit zwischen dem Wechsel der Anzeigen
+					break;
+					case 'focus': 
+					clearInterval(tab);
+					document.title = focusTitle=; // Originalen Title einsetzen
+					break;
+				}
+			}
+			$(this).data('prevType', e.type);
+		});
+	</script>
+
+<!--FOOTER----------------->
+ <footer>
+
+
+ <nav>
+		 <ul>
+     <li>
+				 <a href="https://m.youtube.com/channel/UCvnq-qxzYsHHCpxul82vfcw"><i class="fab fa-youtube"></i></a>
+			 </li>
+			 &nbsp;
+
+			 <li>
+				 <a href="https://www.facebook.com/yamenhamid.hamid"><i class="fab fa-facebook-f"></i></a>
+			 </li>
+			 &nbsp;
+
+			 <li>
+				 <a href=https://twitter.com/Yamen662006><i class="fab fa-twitter"></i></a>
+			 </li>
+			 &nbsp;
+
+			 <li>
+				 <a href="https://www.instagram.com/einfachyamen/
+"><i class="fab fa-instagram"></i></a>
+			 </li>
+
+		 </ul>
+	 </nav>
+<p>&copy;2020 <span
+     class="txt-rotate"
+     data-period="2000"
+        data-rotate='[ " Powered by Yamen", "Powered by Yamen", "Powered by Yamen", "Powered by Yamen", "Powered by Yamen" ]'></span></p>
+
+</footer>
+<script language="javascript" type="text/javascript" src="mobile.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+// Smooth scrolling when clicking an anchor link
+$(document).ready(function(){
+
+	// Klick auf eien Link, der eine Raute (# = Anker) enthält
+	$('a[href^="#"]').on('click',function(e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 500, 'swing', function () {
+			window.location.hash = target;
+		});
+	});
+});
+ </script>
+ <script>
+		focusTitle = $('head title').text(); // Originalen Title speichern
+		$(window).on('blur focus', function(e) {
+			var prevType = $(this).data('prevType'); 
+			if (prevType != e.type) {
+				switch (e.type) {
+					case 'blur':
+						var i=0;
+						tab = setInterval(function() {
+							switch(i++%2) { // Die Zahl hinter dem % muss mit der Anzahl der Cases übereinstimmen
+								case 0: document.title = 'Besuch uns wieder'; // Erste Anzeige im Tab
+								break;
+								case 1: document.title = '༼ つ ಥ_ಥ ༽つ'; // Zweite Anzeige im Tab
+							}
+						}, 1000); // Zeit zwischen dem Wechsel der Anzeigen
+					break;
+					case 'focus': 
+					clearInterval(tab);
+					document.title = focusTitle; // Originalen Title einsetzen
+					break;
+				}
+			}
+			$(this).data('prevType', e.type);
+		});
+	</script>
+<script src="app.js"></script>
+
+</body>
+</html>
